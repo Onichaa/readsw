@@ -21,17 +21,21 @@ func main() {
 NewBot("628388024064", func(k string) {
 	println(k)
 })
-	http.Handle("/file/", http.StripPrefix("/file", &webdav.Handler{
-		FileSystem: webdav.Dir("."),
-		LockSystem: webdav.NewMemLS(),
-	}))
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("piw piw"))
-	})
-	erro := http.ListenAndServe(":8080", nil)
-	if erro != nil {
-		println("HTTP ERROR",erro)
+	/* web server */
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "1337" // Port default jika tidak ada yang disetel
 	}
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "readsw Bot Connected")
+	})
+
+	err := http.ListenAndServe(":"+port, nil)
+	if err != nil {
+		fmt.Println("Error starting server:", err)
+	}
+	/* end web server */
 }
 
 func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
