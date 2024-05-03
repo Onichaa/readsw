@@ -1,6 +1,7 @@
 {
-  "name": "Ryuu-Bot",
+  "name": "Ryyuu-Bot",
   "scripts": {
   "postinstall": "npm install pm2 -g"
 }
 }
+
