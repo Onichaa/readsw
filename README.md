@@ -4,7 +4,7 @@ ___
 <h1 align="center">whatsapp status reader</h1>
 
 Tandai status sebagai telah dilihat
-![contoh1](https://raw.githubusercontent.com/frmdeveloper/whatsapp-status-reader/main/IMG-20220808-WA0227.jpg)
+![contoh1](https://github.com/Onichaa/readsw/blob/main/IMG-20220808-WA0227.jpg)
 
 ___
 sebenarnya ini gk guna sih
