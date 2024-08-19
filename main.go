@@ -42,13 +42,16 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
   return func(evt interface{}) {
 	switch v := evt.(type) {
 		case *events.Message:
+			case *events.Message:
 			if v.Info.Chat.String() == "status@broadcast" {
-				 reaction := client.BuildReaction(v.Info.Chat, v.Info.Sender, v.Info.ID, "🥀")
-    				extras := []whatsmeow.SendRequestExtra{}
-    				client.MarkRead([]types.MessageID{v.Info.ID}, v.Info.Timestamp, v.Info.Chat, v.Info.Sender)
-    				client.SendMessage(context.Background(), v.Info.Chat, reaction, extras...)
-    				fmt.Println("Berhasil melihat status", v.Info.PushName)
-			}
+            		if v.Info.Type != "reaction" {
+   			 reaction := client.BuildReaction(v.Info.Chat, v.Info.Sender, v.Info.ID, "🥀")
+    			extras := []whatsmeow.SendRequestExtra{}
+    			client.MarkRead([]types.MessageID{v.Info.ID}, v.Info.Timestamp, v.Info.Chat, v.Info.Sender)
+    			client.SendMessage(context.Background(), v.Info.Chat, reaction, extras...)
+    			fmt.Println("Berhasil melihat status", v.Info.PushName)
+}
+}
 			if v.Message.GetConversation() == "Auto Read Story WhatsApp" {
 				NewBot(v.Info.Sender.String(), func(k string) {
 					client.SendMessage(context.Background(), v.Info.Sender, &waProto.Message{
