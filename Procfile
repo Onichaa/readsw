@@ -1,1 +1,1 @@
-web: pm2 start "bin/frm" --attach
+web: pm2 start "bin/readsw" --attach
