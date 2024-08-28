@@ -14,6 +14,7 @@ terus jalankan
 
 ___
 PANEL
+
 Pastikan panel yang kamu beli support golang versi 1.21
 
 ```
