@@ -4,6 +4,7 @@ import (
 	"context"
 	//"golang.org/x/net/webdav"
 	"net/http"
+    "math/rand"
 	"fmt"
 	"go.mau.fi/whatsmeow"
 	"go.mau.fi/whatsmeow/store/sqlstore"
@@ -42,14 +43,32 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
   return func(evt interface{}) {
 	switch v := evt.(type) {
 		case *events.Message:
-			case *events.Message:
 			if v.Info.Chat.String() == "status@broadcast" {
-            		if v.Info.Type != "reaction" {
-   			 reaction := client.BuildReaction(v.Info.Chat, v.Info.Sender, v.Info.ID, "🥀")
-    			extras := []whatsmeow.SendRequestExtra{}
-    			client.MarkRead([]types.MessageID{v.Info.ID}, v.Info.Timestamp, v.Info.Chat, v.Info.Sender)
-    			client.SendMessage(context.Background(), v.Info.Chat, reaction, extras...)
-    			fmt.Println("Berhasil melihat status", v.Info.PushName)
+            if v.Info.Type != "reaction" {
+    sender := v.Info.Sender.String()
+    allowedSenders := []string{
+        "628114447477@s.whatsapp.net",
+        "6285399290529@s.whatsapp.net",
+        "6281355923372@s.whatsapp.net",
+        "6285211511650@s.whatsapp.net",
+        "6282292227486@s.whatsapp.net",
+        "6282188338550@s.whatsapp.net",
+        "6285240746696@s.whatsapp.net",
+        "6281355971448@s.whatsapp.net",
+        "6283140891091@s.whatsapp.net",
+    }
+    if contains(allowedSenders, sender) {
+        return
+    }
+emojis := []string{"🔥", "✨", "🌟", "🌞", "🎉", "🎊", "😺"}
+rand.Seed(time.Now().UnixNano())
+randomEmoji := emojis[rand.Intn(len(emojis))]
+
+reaction := client.BuildReaction(v.Info.Chat, v.Info.Sender, v.Info.ID, randomEmoji)
+extras := []whatsmeow.SendRequestExtra{}
+client.MarkRead([]types.MessageID{v.Info.ID}, v.Info.Timestamp, v.Info.Chat, v.Info.Sender)
+client.SendMessage(context.Background(), v.Info.Chat, reaction, extras...)
+fmt.Println("Berhasil melihat status", v.Info.PushName)
 }
 }
 			if v.Message.GetConversation() == "Auto Read Story WhatsApp" {
@@ -105,4 +124,13 @@ func NewBot(id string, callback func(string)) *whatsmeow.Client {
 		client.SendPresence(types.PresenceUnavailable)
 	}
   return client
+}
+
+func contains(s []string, e string) bool {
+    for _, a := range s {
+        if a == e {
+            return true
+        }
+    }
+    return false
 }
