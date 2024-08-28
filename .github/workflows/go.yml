@@ -8,8 +8,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: "0 */5 * * *"
+  #schedule:
+    #- cron: "0 */5 * * *"
 jobs:
 
   build:
@@ -29,6 +29,7 @@ jobs:
       run: go build -v ./...
         
     - name: Test
-      run: pm2 start 'go run main.go' --attach
+      run: go version
+      #run: pm2 start 'go run main.go' --attach
       #pm2 start "go run ." --watch ".go" --watch "/.go" --watch "//.go" && pm2 log ./...
       
