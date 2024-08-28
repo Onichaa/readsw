@@ -18,6 +18,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 )
+/
 
 func main() {
 	NewBot("628388024064", func(k string) {
