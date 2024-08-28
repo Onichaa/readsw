@@ -13,6 +13,15 @@ Buka file main.go dan masukin nomormu
 terus jalankan
 
 ___
+PANEL
+Pastikan panel yang kamu beli support golang versi 1.21
+
+```
+$ git clone https://github.com/Onichaa/readsw
+$ cd readsw
+$ go run main.go
+```
+___
 LINUX/VPS
 
 ```
