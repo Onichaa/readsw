@@ -1,4 +1,4 @@
-module frm
+module readsw
 
 go 1.21
 
