@@ -15,8 +15,17 @@ Terus masuk kedalam foldernya
 Buka file main.go dan masukin nomormu
 terus jalankan
 
+___
+LINUX/VPS
+
 ```
-go run main.go
+$ wget https://golang.org/dl/go1.21.2.linux-amd64.tar.gz
+$ tar -xf go1.21.2.linux-amd64.tar.gz
+$ sudo mv go /usr/local/go
+$ sudo echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+$ source ~/.bashrc
+$ cd readsw
+$ go run main.go
 ```
 
 
