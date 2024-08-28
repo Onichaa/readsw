@@ -11,4 +11,5 @@ COPY go.mod go.sum ./
 COPY . .
 
 # Run the command to start the application
-CMD ["pm2 start 'go run .' --watch '.go' --watch '/.go' --watch '//.go' && pm2 log"]
+# CMD ["pm2 start 'go run .' --watch '.go' --watch '/.go' --watch '//.go' && pm2 log"]
+CMD ["go run main.go"]
