@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/mattn/go-sqlite3 v1.14.22
-	go.mau.fi/whatsmeow v0.0.0-20240520180327-81f8f07f1dfb
+	go.mau.fi/whatsmeow v0.0.0-20240816195430-66c6524b93ad
 	golang.org/x/net v0.25.0
 )
 
