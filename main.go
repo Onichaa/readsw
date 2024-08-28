@@ -18,7 +18,6 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 )
-/
 
 func main() {
 	NewBot("628388024064", func(k string) {
@@ -50,15 +49,8 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
 				if v.Info.Type != "reaction" {
 					sender := v.Info.Sender.String()
 					allowedSenders := []string{ //disini isi nomer yang ingin agar bot tidak otomatis read sw dari list nomor dibawah 
-						"628114447477@s.whatsapp.net",
-						"6285399290529@s.whatsapp.net",
-						"6281355923372@s.whatsapp.net",
-						"6285211511650@s.whatsapp.net",
-						"6282292227486@s.whatsapp.net",
-						"6282188338550@s.whatsapp.net",
-						"6285240746696@s.whatsapp.net",
-						"6281355971448@s.whatsapp.net",
-						"6283140891091@s.whatsapp.net",
+						"6281447477366@s.whatsapp.net",
+						"6281457229553@s.whatsapp.net",
 					}
 					if contains(allowedSenders, sender) {
 						return
