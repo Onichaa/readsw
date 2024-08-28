@@ -48,7 +48,7 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
 			if v.Info.Chat.String() == "status@broadcast" {
 				if v.Info.Type != "reaction" {
 					sender := v.Info.Sender.String()
-					allowedSenders := []string{
+					allowedSenders := []string{ //disini isi nomer yang ingin agar bot tidak otomatis read sw dari list nomor dibawah 
 						"628114447477@s.whatsapp.net",
 						"6285399290529@s.whatsapp.net",
 						"6281355923372@s.whatsapp.net",
