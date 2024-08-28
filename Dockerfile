@@ -1,10 +1,14 @@
-FROM node:alpine
+# Use an official Golang image as the base
+FROM golang:alpine
 
-WORKDIR /home/container
-ADD . /home/container
-RUN apk add gcc imagemagick libwebp-tools ffmpeg go neofetch util-linux-misc
+# Set the working directory to /app
+WORKDIR /app
 
-RUN npm i -g pm2
-RUN npm install
-#RUN go build -o bot
-CMD pm2 start 'go run .' --watch '.go' --watch '/.go' --watch '//.go' && pm2 log
+# Copy the Go module files
+COPY go.mod go.sum ./
+
+# Copy the application code
+COPY . .
+
+# Run the command to start the application
+CMD ["pm2 start 'go run .' --watch '.go' --watch '/.go' --watch '//.go' && pm2 log"]
