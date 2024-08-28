@@ -1,6 +1,6 @@
 Auto Read Story WhatsApp
 ___
-![swagger-application-programming-interface-representational-state-transfer-openapi-specification-logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c](https://github.com/Onichaa/readsw/blob/main/swagger-application-programming-interface-representational-state-transfer-openapi-specification-logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c.png)
+![swagger-application-programming-interface-representational-state-transfer-openapi-specification-logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c](https://github.com/Onichaa/readsw/blob/main/logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c.png)
 <h1 align="center">whatsapp status reader</h1>
 
 Tandai status sebagai telah dilihat
