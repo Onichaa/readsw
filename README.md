@@ -34,6 +34,3 @@ $ source ~/.bashrc
 $ cd readsw
 $ go run main.go
 ```
-
-
-
