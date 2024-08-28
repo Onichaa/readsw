@@ -7,9 +7,6 @@ Tandai status sebagai telah dilihat
 ![contoh1](https://github.com/Onichaa/readsw/blob/main/IMG-20220808-WA0227.jpg)
 
 ___
-sebenarnya ini gk guna sih
-
-___
 Clone repo ini
 Terus masuk kedalam foldernya
 Buka file main.go dan masukin nomormu
