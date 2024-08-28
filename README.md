@@ -31,6 +31,7 @@ $ tar -xf go1.21.2.linux-amd64.tar.gz
 $ sudo mv go /usr/local/go
 $ sudo echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 $ source ~/.bashrc
+$ git clone https://github.com/Onichaa/readsw
 $ cd readsw
 $ go run main.go
 ```
