@@ -1,7 +1,0 @@
-{
-  "name": "readsw",
-  "scripts": {
-  "postinstall": "npm install pm2 -g"
-}
-}
-
