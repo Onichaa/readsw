@@ -34,3 +34,9 @@ $ go mod init readsw
 $ go mod tidy
 $ go run main.go
 ```
+
+___
+Jika ingin run ulang ketik aja langsung
+```
+$ go run main.go
+```
