@@ -8,7 +8,7 @@ ___
 ___
 ### PANEL
 
-- Pastikan panel yang kamu beli support golang versi [1.23](https://go.dev/dl/go1.23.0.linux-amd64.tar.gz)
+- Pastikan panel yang kamu beli support golang versi 1.23
 - Jalankan command dibawah ini di terminal 
 
 
