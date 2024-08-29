@@ -12,4 +12,4 @@ COPY . .
 
 # Run the command to start the application
 # CMD ["pm2 start 'go run .' --watch '.go' --watch '/.go' --watch '//.go' && pm2 log"]
-CMD ["go run main.go"]
+CMD ["go mod init && go mod tidy && go run main.go"]
