@@ -3,7 +3,7 @@ ___
 <h1 align="center">whatsapp status reader</h1>
 
 
-![contoh1](https://github.com/Onichaa/readsw/blob/main/Contoh%20Readsw.jpeg)
+![contoh1](https://pomf2.lain.la/f/yxp1y9hx.jpg)
 
 ___
 Clone repo ini
