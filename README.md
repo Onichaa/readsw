@@ -6,30 +6,28 @@ ___
 </p>
 
 ___
-Clone repo ini
-Terus masuk kedalam foldernya
-Buka file main.go dan masukin nomormu
-terus jalankan
+### PANEL
 
-___
-PANEL
+- Pastikan panel yang kamu beli support golang versi 1.21
+- Jalankan command dibawah ini di terminal 
 
-Pastikan panel yang kamu beli support golang versi 1.21
 
 ```
 $ git clone https://github.com/Onichaa/readsw
 $ cd readsw
+$ go mod init readsw
+$ go mod tidy
 $ go run main.go
 ```
+
 ___
-LINUX/VPS
+### LINUX/VPS
+
+- [Install package golang untuk linux/vps](https://go.dev/doc/install)
+
+kalo udah install package golang di vpsnya jalankan command di bawah ini di terminal
 
 ```
-$ wget https://golang.org/dl/go1.21.2.linux-amd64.tar.gz
-$ tar -xf go1.21.2.linux-amd64.tar.gz
-$ sudo mv go /usr/local/go
-$ sudo echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-$ source ~/.bashrc
 $ git clone https://github.com/Onichaa/readsw
 $ cd readsw
 $ go mod init readsw
