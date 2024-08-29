@@ -1,6 +1,5 @@
-Auto Read Story WhatsApp
 ___
-<h1 align="center">whatsapp status reader</h1>
+<h1 align="center">Auto Read Story WhatsApp</h1>
 
 <p align="center">
   <img src="https://pomf2.lain.la/f/yxp1y9hx.jpg" alt="contoh1">
