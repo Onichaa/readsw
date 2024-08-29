@@ -2,6 +2,7 @@ Auto Read Story WhatsApp
 ___
 <h1 align="center">whatsapp status reader</h1>
 
+
 ![contoh1](https://github.com/Onichaa/readsw/blob/main/Contoh%20Readsw.jpeg)
 
 ___
