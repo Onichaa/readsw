@@ -2,8 +2,9 @@ Auto Read Story WhatsApp
 ___
 <h1 align="center">whatsapp status reader</h1>
 
-
-![contoh1](https://pomf2.lain.la/f/yxp1y9hx.jpg)
+<p align="center">
+  <img src="https://pomf2.lain.la/f/yxp1y9hx.jpg" alt="contoh1">
+</p>
 
 ___
 Clone repo ini
