@@ -1,9 +1,8 @@
 Auto Read Story WhatsApp
 ___
-![swagger-application-programming-interface-representational-state-transfer-openapi-specification-logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c](https://github.com/Onichaa/readsw/blob/main/logo-whatsapp-status-cartoon-image-691e5a14f757f06d7b7293dea117c32c.png)
 <h1 align="center">whatsapp status reader</h1>
 
-Tandai status sebagai telah dilihat
+Contoh:
 ![contoh1](https://github.com/Onichaa/readsw/blob/main/Contoh%20Readsw.jpeg)
 
 ___
@@ -33,5 +32,7 @@ $ sudo echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 $ source ~/.bashrc
 $ git clone https://github.com/Onichaa/readsw
 $ cd readsw
+$ go mod init readsw
+$ go mod tidy
 $ go run main.go
 ```
