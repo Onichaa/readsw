@@ -107,11 +107,8 @@ func NewBot(id string, callback func(string)) *whatsmeow.Client {
                 callback("melebihi 60 detik, memutuskan")
             }
         })
-
-        client.SendPresence(types.PresenceUnavailable)
     } else {
         fmt.Println("Connected to readsw!!")
-        client.SendPresence(types.PresenceUnavailable)
     }
     return client
 }
