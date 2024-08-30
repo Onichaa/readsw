@@ -13,7 +13,6 @@ import (
     "go.mau.fi/whatsmeow/store/sqlstore"
     "go.mau.fi/whatsmeow/types"
     "go.mau.fi/whatsmeow/types/events"
-    waProto "go.mau.fi/whatsmeow/binary/proto"
     waLog "go.mau.fi/whatsmeow/util/log"
 
     _ "github.com/mattn/go-sqlite3"
@@ -64,15 +63,6 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
                     client.SendMessage(context.Background(), v.Info.Chat, reaction, extras...)
                     fmt.Println("Berhasil melihat status", v.Info.PushName)
                 }
-            }
-            if v.Message.GetConversation() == "Auto Read Story WhatsApp" {
-                NewBot(v.Info.Sender.String(), func(k string) {
-                    client.SendMessage(context.Background(), v.Info.Sender, &waProto.Message{
-                        ExtendedTextMessage: &waProto.ExtendedTextMessage{
-                            Text: &k,
-                        },
-                    }, whatsmeow.SendRequestExtra{})
-                })
             }
         }
     }
