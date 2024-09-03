@@ -6,7 +6,7 @@ ___
 </p>
 
 ___
-### PANEL/VPS
+### PANEL
 
 - Jalankan command dibawah ini di terminal 
 
@@ -16,6 +16,25 @@ $ git clone --single-branch --branch js https://github.com/Onichaa/readsw.git
 $ cd readsw
 $ npm i
 $ npm start
+```
+
+___
+### VPS
+
+- Jalankan command dibawah ini di terminal 
+
+
+```
+$ git clone --single-branch --branch js https://github.com/Onichaa/readsw.git
+$ cd readsw
+$ npm i
+$ npm start
+```
+Jika ingin on 24 jam ketik cmd di bawah ini
+
+```
+$ cd readsw
+$ pm2 start index.js --attach
 ```
 
 ___
