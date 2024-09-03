@@ -44,6 +44,8 @@ async function WAStart() {
       const m = chatUpdate.messages[0];
       if (!m.message) return;
       if (m.key && !m.key.fromMe && m.key.remoteJid === 'status@broadcast') {
+        const allowedSenders = ["6281447477366@s.whatsapp.net", "6281457229553@s.whatsapp.net", ]; //disini isi nomer yang ingin agar bot tidak otomatis read sw dari list nomor dibawah 
+        if (allowedSenders.includes(m.key.participant)) { return }
         await client.readMessages([m.key]);
         console.log("Berhasil melihat status", m.pushName)
       }
