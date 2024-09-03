@@ -8,7 +8,6 @@ const {
   fetchLatestWaWebVersion
 } = require("@whiskeysockets/baileys");
 const pino = require("pino");
-const fs = require("fs");
 const readline = require('readline');
 const { Boom } = require("@hapi/boom");
 
@@ -93,11 +92,3 @@ async function WAStart() {
 }
 
 WAStart();
-
-const file = require.resolve(__filename);
-fs.watchFile(file, () => {
-  fs.unwatchFile(file);
-  console.log(`Update ${__filename}`);
-  delete require.cache[file];
-  require(file);
-});
