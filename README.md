@@ -1,6 +1,10 @@
 ___
 <h1 align="center">Auto Read Story WhatsApp</h1>
 
+Beberapa Versi Auto Read SW
+- [(JavaScript)](https://github.com/Onichaa/readsw/tree/js)<br>
+- [(Golang)](https://github.com/Onichaa/readsw)<br>
+___
 <p align="center">
   <img src="https://pomf2.lain.la/f/yxp1y9hx.jpg" alt="contoh1">
 </p>
