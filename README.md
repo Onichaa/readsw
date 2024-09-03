@@ -30,8 +30,22 @@ $ cd readsw
 $ npm i
 $ npm start
 ```
-Jika ingin on 24 jam ketik cmd di bawah ini
 
+___
+### NOTE
+
+- Login memakai pairing code
+```
+$ node index.js --pairing-code
+```
+
+- Login memakai QR
+```
+$ node index.js atau bisa juga npm start
+```
+
+- Agar 24 jam di VPS/LINUX
+  
 ```
 $ cd readsw
 $ pm2 start index.js --attach
