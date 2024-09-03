@@ -1,0 +1,30 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  #schedule:
+    #- cron: "0 */5 * * *"
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-go@v4
+      with:
+       node-version: '18'
+
+    #- name: Install dependencies
+      #run: npm install -g pm2
+         
+    - name: Install Module
+      run: npm i
+        
+    - name: Test
+      run: npm test -v ./...
+      #run: pm2 start index.js --attach
