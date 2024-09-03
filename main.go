@@ -4,7 +4,6 @@ import (
     "context"
     "fmt"
     "math/rand"
-    "net/http"
     "os"
     "strings"
     "time"
@@ -21,21 +20,7 @@ import (
 func main() {
     NewBot("6285796103714", func(k string) { //masukkan nomor kamu yang ingin di pasangkan auto read story wa
         println(k)
-    })
-
-    port := os.Getenv("PORT")
-    if port == "" {
-        port = "1337" // Port default jika tidak ada yang disetel
-    }
-
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprint(w, "readsw Bot Connected")
-    })
-
-    err := http.ListenAndServe(":"+port, nil)
-    if err != nil {
-        fmt.Println("Error starting server:", err)
-    }
+    }) 
 }
 
 func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
