@@ -12,7 +12,7 @@ ___
 
 
 ```
-$ git clone https://github.com/Onichaa/readsw
+$ git clone --single-branch --branch js https://github.com/Onichaa/readsw.git
 $ cd readsw
 $ npm i
 $ npm start
