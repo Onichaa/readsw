@@ -36,9 +36,3 @@ Jika ingin on 24 jam ketik cmd di bawah ini
 $ cd readsw
 $ pm2 start index.js --attach
 ```
-
-___
-Jika ingin run ulang ketik aja langsung
-```
-$ npm start
-```
