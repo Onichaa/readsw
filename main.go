@@ -41,6 +41,7 @@ func registerHandler(client *whatsmeow.Client) func(evt interface{}) {
                         return
                     }
 
+                    time.Sleep(5 * time.Minute) //ini agar 5 menit kedepan akan otomatis dibaca tiap sw
                     emojis := []string{"🔥", "✨", "🌟", "🌞", "🎉", "🎊", "😺"}
                     rand.Seed(time.Now().UnixNano())
                     randomEmoji := emojis[rand.Intn(len(emojis))]
