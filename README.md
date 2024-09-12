@@ -2,7 +2,7 @@ ___
 <h1 align="center">Auto Read Story WhatsApp</h1>
 
 <p align="center">
-  <img src="https://pomf2.lain.la/f/jh47lpe3.jpg" alt="contoh1">
+  <img src="https://pomf2.lain.la/f/tjwpce10.jpg" alt="contoh1">
 </p>
 
 ___
