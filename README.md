@@ -10,8 +10,8 @@ ___
 
 ___
 Beberapa Versi Auto Read SW
-- [(JavaScript)](https://github.com/Onichaa/readsw/tree/js)<br>
-- [(Golang)](https://github.com/Onichaa/readsw)<br>
+- [(JavaScript-Baileys)](https://github.com/Onichaa/readsw/tree/js)<br>
+- [(Golang-whatsmeow)](https://github.com/Onichaa/readsw)<br>
 ___
 <p align="center">
   <img src="https://pomf2.lain.la/f/yxp1y9hx.jpg" alt="contoh1">
