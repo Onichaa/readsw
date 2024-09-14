@@ -21,7 +21,7 @@ import (
 )
 
 func main() {
-    NewBot("6285796103714", func(k string) { //masukkan nomor kamu yang ingin di pasangkan auto read story wa
+    NewBot("", func(k string) { //masukkan nomor kamu yang ingin di pasangkan auto read story wa
         println(k)
     }) 
 }
