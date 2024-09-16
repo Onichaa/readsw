@@ -43,34 +43,51 @@ async function WAStart() {
     try {
       const m = chatUpdate.messages[0];
       if (!m.message) return;
+      
+      const maxTime = 5 * 60 * 1000; // 5 minutes
+
       if (m.key && !m.key.fromMe && m.key.remoteJid === 'status@broadcast') {
-        const allowedSenders = ["6281447345627@s.whatsapp.net", "628145563553@s.whatsapp.net", ]; //disini isi nomer yang ingin agar bot tidak otomatis read sw dari list nomor dibawah 
-        if (allowedSenders.includes(m.key.participant)) { return }
-        
-        const emojis = ["🔥", "✨", "🤖", "🌟", "🌞", "🎉", "🎊", "😺"];
-        function getRandomEmoji() {
-            const randomIndex = Math.floor(Math.random() * emojis.length);
-            return emojis[randomIndex];
+        if (!m.message.reactionMessage) {
+          const allowedSenders = [
+            "6281447345627@s.whatsapp.net",
+            "628145563553@s.whatsapp.net",
+          ];
+
+          if (!allowedSenders.includes(m.key.participant)) {
+            const currentTime = Date.now();
+            const messageTime = m.messageTimestamp * 1000;
+            const timeDiff = currentTime - messageTime;
+
+            if (timeDiff <= maxTime) {
+              const emojis = [
+                "🔥", "✨", "🤖", "🌟", "🌞", "🎉", "🎊", "😺"
+              ];
+
+              function getRandomEmoji() {
+                const randomIndex = Math.floor(Math.random() * emojis.length);
+                return emojis[randomIndex];
+              }
+
+              const randomEmoji = getRandomEmoji();
+              try {
+                await client.sendMessage("status@broadcast", {
+                  react: { text: randomEmoji, key: m.key },
+                }, { statusJidList: [m.key.participant] });
+
+                await client.readMessages([m.key]);
+                console.log(`Berhasil melihat status dari ${m.pushName}`);
+              } catch (error) {
+                console.error('Error', error);
+              }
+            }
+          }
         }
-       
-            const randomEmoji = getRandomEmoji();
-            client.sendMessage("status@broadcast", { 
-                react: { 
-                    text: randomEmoji, 
-                    key: m.key 
-                }
-            }, { 
-                statusJidList: [m.key.participant] 
-            });
-           
-        
-        await client.readMessages([m.key]);
-        console.log("Berhasil melihat status", m.pushName)
       }
     } catch (err) {
       console.log(err);
     }
   });
+  
 
   client.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect } = update;
